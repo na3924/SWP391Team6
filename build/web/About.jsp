@@ -55,6 +55,24 @@
             .custom-indicators button.active {
                 background-color: #007bff;
             }
+            #testimonialWrapper {
+                display: flex;
+                justify-content: center;
+                border-radius: 20px; /* Bo góc */
+                border: 1px solid rgba(0, 0, 0, 0.1); /* Viền mờ */
+                backdrop-filter: blur(10px); /* Làm mờ nền nếu có nền phía sau (hiệu ứng kính mờ) */
+                background-color: rgba(255, 255, 255, 0.85); /* Nền trong suốt nhẹ để mờ đẹp */
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+                overflow: hidden; /* Đảm bảo bo góc áp dụng cho phần bên trong */
+                padding: 20px;
+                
+            }
+            .carousel-indicators {
+                display: flex;
+                justify-content: center; /* Căn giữa theo chiều ngang */
+                margin-top: 10px; /* (tùy chọn) tạo khoảng cách với phần trên */
+            }
+
         </style>
 
     </head>
@@ -312,8 +330,11 @@
         <!-- PHẢN HỒI TỪ HỌC VIÊN -->
         <div class="container py-5">
             <div class="row">
-                <div class="col-md-6">
-                    <h3 class="mb-4 text-start">Lắng nghe và chia sẻ</h3>
+                <div class="col-md-5">
+                    <div class="d-flex justify-content-center">
+    <h3 class="mb-4">Lắng nghe và chia sẻ</h3>
+</div>
+
                     <div id="testimonialWrapper">
                         <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner text-start">
@@ -322,17 +343,17 @@
                                 <div class="carousel-item active">
                                     <div class="card shadow border-0 p-4">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://i.imgur.com/3GvwNBf.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 70px; height: 70px; object-fit: cover;">
+                                            <img src="img/hocvien-1.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 120px; height: 120px; object-fit: cover;">
                                             <div>
                                                 <h6 class="text-primary mb-1">Phan Đức Kiên</h6>
-                                                <p class="mb-0 small">Tài khoản hocmai.vn: phanduck****@gmail.com</p>
+                                                <p class="mb-0 small">Tài khoản: kien****@gmail.com</p>
                                                 <p class="mb-0 small">🏆 90,15 điểm - Thi Đánh giá tư duy 2024</p>
-                                                <p class="mb-0 small">🥇 Học sinh giỏi cấp tỉnh môn Toán</p>
+                                                <p class="mb-0 small">🥇 Học sinh giỏi cấp tỉnh Toán</p>
                                                 <p class="mb-0 small">🎓 Được tuyển thẳng vào Đại học Bách Khoa Hà Nội</p>
                                             </div>
                                         </div>
                                         <p class="fst-italic text-muted">
-                                            <i class="bi bi-quote fs-4 me-1"></i>Em cảm ơn HOCMAI và các thầy cô rất nhiều ạ.
+                                            <i class="bi bi-quote fs-4 me-1"></i>Em cảm ơn Edura và các thầy cô rất nhiều ạ.
                                         </p>
                                     </div>
                                 </div>
@@ -341,17 +362,17 @@
                                 <div class="carousel-item">
                                     <div class="card shadow border-0 p-4">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://i.imgur.com/qIufhof.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 70px; height: 70px; object-fit: cover;">
+                                            <img src="img/hocvien-2.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 120px; height: 120px; object-fit: cover;">
                                             <div>
                                                 <h6 class="text-primary mb-1">Nguyễn Thị Hà My</h6>
                                                 <p class="mb-0 small">Tài khoản: hamy****@gmail.com</p>
                                                 <p class="mb-0 small">🏆 Đạt học bổng Edura Excellence 2024</p>
-                                                <p class="mb-0 small">🌟 Thủ khoa kỳ thi thử ĐGNL toàn quốc</p>
+                                                <p class="mb-0 small">🌟 Đạt thủ khoa kỳ thi ĐGNL toàn quốc 2024</p>
                                                 <p class="mb-0 small">📚 Đạt IELTS 7.5 khi đang học lớp 11</p>
                                             </div>
                                         </div>
                                         <p class="fst-italic text-muted">
-                                            <i class="bi bi-quote fs-4 me-1"></i>Chương trình học dễ hiểu, thầy cô tận tâm và nhiệt huyết.
+                                            <i class="bi bi-quote fs-4 me-1"></i>Không khí lớp học thoải mái, thầy cô nhiệt tình, bạn bè thân thiện.
                                         </p>
                                     </div>
                                 </div>
@@ -359,17 +380,17 @@
                                 <div class="carousel-item">
                                     <div class="card shadow border-0 p-4">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://i.imgur.com/JcZg6Pr.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 70px; height: 70px; object-fit: cover;">
+                                            <img src="img/hocvien-3.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 120px; height: 120px; object-fit: cover;">
                                             <div>
                                                 <h6 class="text-primary mb-1">Trần Minh Quân</h6>
-                                                <p class="mb-0 small">Tài khoản: tmquan****@gmail.com</p>
+                                                <p class="mb-0 small">Tài khoản: quan****@gmail.com</p>
                                                 <p class="mb-0 small">🥇 Giải Nhì HSG Quốc gia Vật lý</p>
-                                                <p class="mb-0 small">💻 9.5 điểm thi Tin học ứng dụng quốc tế MOS</p>
+                                                <p class="mb-0 small">💻 9.5 điểm thi Tin học quốc tế MOS</p>
                                                 <p class="mb-0 small">🎓 Được học bổng toàn phần tại FPT University</p>
                                             </div>
                                         </div>
                                         <p class="fst-italic text-muted">
-                                            <i class="bi bi-quote fs-4 me-1"></i>Em rất biết ơn vì những kiến thức bổ ích từ Edura, đặc biệt là cách hệ thống bài học rõ ràng, dễ tiếp cận.
+                                            <i class="bi bi-quote fs-4 me-1"></i>Em rất biết ơn vì những kiến thức bổ ích từ Edura.
                                         </p>
                                     </div>
                                 </div>
@@ -377,13 +398,13 @@
                                 <div class="carousel-item">
                                     <div class="card shadow border-0 p-4">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://i.imgur.com/qIufhof.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 70px; height: 70px; object-fit: cover;">
+                                            <img src="img/hocvien-4.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 120px; height: 120px; object-fit: cover;">
                                             <div>
-                                                <h6 class="text-primary mb-1">Nguyễn Thị Hà My</h6>
-                                                <p class="mb-0 small">Tài khoản: hamy****@gmail.com</p>
-                                                <p class="mb-0 small">🎖 Học bổng toàn phần Edura 2024</p>
+                                                <h6 class="text-primary mb-1">Nguyễn Thị Thuỳ Linh</h6>
+                                                <p class="mb-0 small">Tài khoản: linh****@gmail.com</p>
+                                                <p class="mb-0 small">🥇 Học bổng toàn phần Edura 2024</p>
                                                 <p class="mb-0 small">📘 GPA 9.5 suốt 3 năm THPT</p>
-                                                <p class="mb-0 small">🏅 Thủ khoa kỳ thi học sinh giỏi môn Văn</p>
+                                                <p class="mb-0 small">🏆 Đạt thủ khoa kỳ thi học sinh giỏi môn Văn 2024</p>
                                             </div>
                                         </div>
                                         <p class="fst-italic text-muted">
@@ -396,12 +417,12 @@
                                 <div class="carousel-item">
                                     <div class="card shadow border-0 p-4">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://i.imgur.com/JcZg6Pr.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 70px; height: 70px; object-fit: cover;">
+                                            <img src="img/hocvien-5.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 120px; height: 120px; object-fit: cover;">
                                             <div>
                                                 <h6 class="text-primary mb-1">Lê Hoàng Phúc</h6>
-                                                <p class="mb-0 small">Tài khoản: hoangphuc****@gmail.com</p>
+                                                <p class="mb-0 small">Tài khoản: phuc****@gmail.com</p>
                                                 <p class="mb-0 small">📊 127 điểm - ĐGNL ĐHQG TP.HCM 2024</p>
-                                                <p class="mb-0 small">🌟 Thành viên đội tuyển HSG quốc gia</p>
+                                                <p class="mb-0 small">🌟 Thành viên đội tuyển HSG quốc gia môn Toán 2023</p>
                                                 <p class="mb-0 small">🏆 Học bổng tài năng Viettel</p>
                                             </div>
                                         </div>
@@ -413,13 +434,13 @@
                                 <div class="carousel-item">
                                     <div class="card shadow border-0 p-4">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://i.imgur.com/8Km9tLL.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 70px; height: 70px; object-fit: cover;">
+                                            <img src="img/hocvien-6.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 120px; height: 120px; object-fit: cover;">
                                             <div>
                                                 <h6 class="text-primary mb-1">Trần Minh Khôi</h6>
-                                                <p class="mb-0 small">Tài khoản: minhkhoi****@gmail.com</p>
-                                                <p class="mb-0 small">💯 9.75 điểm thi tốt nghiệp Toán 2024</p>
-                                                <p class="mb-0 small">🏅 Top 10 thí sinh xuất sắc toàn quốc môn Lý</p>
-                                                <p class="mb-0 small">🎖 Học bổng OISP Đại học Quốc gia TP.HCM</p>
+                                                <p class="mb-0 small">Tài khoản: khoi****@gmail.com</p>
+                                                <p class="mb-0 small">💯 9.75 điểm thi tốt nghiệp Toán</p>
+                                                <p class="mb-0 small">🥇 Top 10 thí sinh xuất sắc toàn quốc</p>
+                                                <p class="mb-0 small">🏆 Học bổng OISP Đại học Quốc gia TP.HCM</p>
                                             </div>
                                         </div>
                                         <p class="fst-italic text-muted">
@@ -430,11 +451,11 @@
                                 <div class="carousel-item">
                                     <div class="card shadow border-0 p-4">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://i.imgur.com/ZcLLrkY.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 70px; height: 70px; object-fit: cover;">
+                                            <img src="img/hocvien-7.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 120px; height: 120px; object-fit: cover;">
                                             <div>
                                                 <h6 class="text-primary mb-1">Đỗ Thị Linh Chi</h6>
-                                                <p class="mb-0 small">Tài khoản: linhchi****@gmail.com</p>
-                                                <p class="mb-0 small">🏆 28.5/30 khối D kỳ thi THPT Quốc gia</p>
+                                                <p class="mb-0 small">Tài khoản: chi****@gmail.com</p>
+                                                <p class="mb-0 small">🏆 28.5/30 kỳ thi THPT Quốc gia</p>
                                                 <p class="mb-0 small">📚 Giải Nhì Quốc gia môn Tiếng Anh</p>
                                                 <p class="mb-0 small">🎓 Học bổng toàn phần Đại học FPT</p>
                                             </div>
@@ -447,13 +468,13 @@
                                 <div class="carousel-item">
                                     <div class="card shadow border-0 p-4">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://i.imgur.com/XqB4x2s.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 70px; height: 70px; object-fit: cover;">
+                                            <img src="img/hocvien-8.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 120px; height: 120px; object-fit: cover;">
                                             <div>
                                                 <h6 class="text-primary mb-1">Ngô Tuấn Anh</h6>
-                                                <p class="mb-0 small">Tài khoản: tuananh****@gmail.com</p>
-                                                <p class="mb-0 small">🌟 9.8 điểm Vật lý kỳ thi tốt nghiệp</p>
-                                                <p class="mb-0 small">🏅 Huy chương Bạc Olympic 30/4</p>
-                                                <p class="mb-0 small">🎓 Đỗ vào Đại học Y Hà Nội</p>
+                                                <p class="mb-0 small">Tài khoản: anh****@gmail.com</p>
+                                                <p class="mb-0 small">🌟 9.8 điểm Vật lý kỳ thi tốt nghiệp THPT Quốc gia</p>
+                                                <p class="mb-0 small">🥇 Huy chương Bạc Olympic 30/4</p>
+                                                <p class="mb-0 small">🎓 Đỗ thủ khoa Đại học Y Hà Nội với 29.5 điểm</p>
                                             </div>
                                         </div>
                                         <p class="fst-italic text-muted">
@@ -464,13 +485,14 @@
                                 <div class="carousel-item">
                                     <div class="card shadow border-0 p-4">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://i.imgur.com/LpaRLTn.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 70px; height: 70px; object-fit: cover;">
+                                            <img src="img/hocvien-9.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 120px; height: 120px; object-fit: cover;">
                                             <div>
                                                 <h6 class="text-primary mb-1">Lý Gia Hưng</h6>
-                                                <p class="mb-0 small">Tài khoản: giahung****@gmail.com</p>
+                                                <p class="mb-0 small">Tài khoản: hung****@gmail.com</p>
                                                 <p class="mb-0 small">📈 131 điểm kỳ thi ĐGNL TP.HCM</p>
-                                                <p class="mb-0 small">🏅 Học sinh giỏi cấp tỉnh môn Hóa</p>
-                                                <p class="mb-0 small">🎖 Nhận học bổng VietHope</p>
+                                                <p class="mb-0 small">🥇 Học sinh giỏi cấp tỉnh môn Hóa</p>
+                                                <p class="mb-0 small">📚 Giải Nhì Quốc gia môn Tiếng Anh</p>
+                                                <p class="mb-0 small">🏆 Nhận học bổng VietHope</p>
                                             </div>
                                         </div>
                                         <p class="fst-italic text-muted">
@@ -481,12 +503,13 @@
                                 <div class="carousel-item">
                                     <div class="card shadow border-0 p-4">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://i.imgur.com/NoM2gdf.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 70px; height: 70px; object-fit: cover;">
+                                            <img src="img/hocvien-10.jpg" alt="Học viên" class="rounded-circle me-3" style="width: 120px; height: 120px; object-fit: cover;">
                                             <div>
                                                 <h6 class="text-primary mb-1">Phạm Mai Hương</h6>
-                                                <p class="mb-0 small">Tài khoản: maihuong****@gmail.com</p>
-                                                <p class="mb-0 small">📚 GPA 9.8, đứng đầu lớp chuyên Văn</p>
-                                                <p class="mb-0 small">🥇 Giải Nhất cấp tỉnh môn Ngữ Văn</p>
+                                                <p class="mb-0 small">Tài khoản: huong****@gmail.com</p>
+                                                <p class="mb-0 small">🌟 GPA 9.8, đứng đầu lớp chuyên Văn</p>
+                                                
+                                                <p class="mb-0 small">🥇 Giải Nhất cấp tỉnh môn Văn</p>
                                                 <p class="mb-0 small">🏆 Học bổng nữ sinh tiêu biểu 2024</p>
                                             </div>
                                         </div>
@@ -501,7 +524,7 @@
                             </div>
 
                             <!-- Chấm tròn điều hướng -->
-                            <div class="custom-indicators mt-3" id="testimonial-indicators">
+                            <div class="custom-indicators mt-3 d-flex justify-content-center" id="testimonial-indicators">
                                 <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
                                 <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
                                 <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
@@ -520,8 +543,41 @@
                 </div>
 
                 <!-- Cột phải sẽ thiết kế sau -->
-                <div class="col-md-6">
-                    <!-- Nội dung cột phải để sau -->
+<section class="bg-gray-100 py-14 px-6 md:px-20">
+  <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">
+    👂 Lắng Nghe Từ Phụ Huynh
+  </h2>
+
+  <div class="space-y-6 max-w-5xl mx-auto">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-xl shadow p-5 flex items-center gap-5">
+      <img src="https://i.pravatar.cc/80?img=7" class="w-16 h-16 rounded-full border-2 border-blue-300" />
+      <div>
+        <p class="text-gray-700 italic">
+          “Tôi hoàn toàn hài lòng với sự tiến bộ của con sau khi học tại trung tâm.”
+        </p>
+        <p class="text-sm text-blue-600 mt-2 font-semibold">– Chị Như, phụ huynh lớp 6</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-xl shadow p-5 flex items-center gap-5">
+      <img src="https://i.pravatar.cc/80?img=9" class="w-16 h-16 rounded-full border-2 border-blue-300" />
+      <div>
+        <p class="text-gray-700 italic">
+          “Giao tiếp với trung tâm rất dễ dàng, giáo viên và nhân viên đều thân thiện.”
+        </p>
+        <p class="text-sm text-blue-600 mt-2 font-semibold">– Anh Quang, phụ huynh lớp 9</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
                 </div>
             </div>
         </div>
