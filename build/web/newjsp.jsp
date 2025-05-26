@@ -19,346 +19,485 @@
         <link href="css/owl.theme.default.min.css" rel="stylesheet">
         <link href="css/tooplate-gotto-job.css" rel="stylesheet">
         <style>
-        /* Ghi đè style cho btn-primary */
-.btn-primary {
-    background-color: #FF6B6B !important; /* Màu hồng đỏ */
-    border-color: #FF6B6B !important; /* Viền cùng màu */
-    color: white !important; /* Văn bản màu trắng */
-    padding: 8px 28px; /* Kích thước giống nút Login */
-    border-radius: 999px; /* Bo góc giống nút Login */
-    font-weight: 600; /* Độ đậm giống nút Login */
-    transition: all 0.3s ease; /* Hiệu ứng mượt */
-}
+            /* Ghi đè style cho btn-primary */
+            .btn-primary {
+                background-color: #FF6B6B !important; /* Màu hồng đỏ */
+                border-color: #FF6B6B !important; /* Viền cùng màu */
+                color: white !important; /* Văn bản màu trắng */
+                padding: 8px 28px; /* Kích thước giống nút Login */
+                border-radius: 999px; /* Bo góc giống nút Login */
+                font-weight: 600; /* Độ đậm giống nút Login */
+                transition: all 0.3s ease; /* Hiệu ứng mượt */
+            }
 
-.btn-primary:hover {
-    background-color: #0DCAF0 !important; /* Màu xanh dương khi hover */
-    border-color: #0DCAF0 !important; /* Viền cùng màu */
-    color: white !important; /* Giữ màu trắng */
-}
+            .btn-primary:hover {
+                background-color: #0DCAF0 !important; /* Màu xanh dương khi hover */
+                border-color: #0DCAF0 !important; /* Viền cùng màu */
+                color: white !important; /* Giữ màu trắng */
+            }
 
-/* Style cho about-section */
-.about-section .btn-primary {
-    display: inline-block;
-    text-align: center;
-}
+            /* Style cho about-section */
+            .about-section .btn-primary {
+                display: inline-block;
+                text-align: center;
+            }
 
-.text-primary {
-    color: #FF6B6B !important;
-}
+            footer.text-primary {
+                color: #FF6B6B !important;
+            }
 
-/* Style cho header */
-.top-header {
-    background-color: #FFF1F1;
-}
+            /* Style cho header */
+            .top-header {
+                background-color: #FFF1F1;
+            }
 
-/* Style cho nút Login */
-.btn-login {
-    background-color: #FF6B6B;
-    color: white !important;
-    padding: 8px 28px;
-    border-radius: 999px;
-    border: none;
-    font-weight: 600;
-    display: inline-block;
-    white-space: nowrap;
-    text-align: center;
-    transition: all 0.3s ease;
-}
+            /* Style cho nút Login */
+            .btn-login {
+                background-color: #FF6B6B;
+                color: white !important;
+                padding: 8px 28px;
+                border-radius: 999px;
+                border: none;
+                font-weight: 600;
+                display: inline-block;
+                white-space: nowrap;
+                text-align: center;
+                transition: all 0.3s ease;
+            }
 
-.btn-login:hover {
-    background-color: #FFE66D;
-    color: white !important;
-}
+            .btn-login:hover {
+                background-color: #FFE66D;
+                color: white !important;
+            }
 
-/* Style cho course-panel và column */
-.course-panel {
-    display: none !important;
-}
+            /* Style cho course-panel và column */
+            .course-panel {
+                display: none !important;
+            }
 
-.course-panel.active {
-    display: block !important;
-}
+            .course-panel.active {
+                display: block !important;
+            }
 
-.course-panel .column {
-    display: none !important;
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    overflow-y: auto;
-}
+            .course-panel .column {
+                display: none !important;
+                flex: 1;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                overflow-y: auto;
+            }
 
-.course-panel .column.active {
-    display: flex !important;
-    flex-direction: column;
-}
+            .course-panel .column.active {
+                display: flex !important;
+                flex-direction: column;
+            }
 
-/* Style cho navbar-vertical */
-#navbar-vertical {
-    display: none !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 600px;
-    z-index: 1000;
-}
+            /* Style cho navbar-vertical */
+            #navbar-vertical {
+                display: none !important;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 600px;
+                z-index: 1000;
+            }
 
-#navbar-vertical.show {
-    display: block !important;
-}
+            #navbar-vertical.show {
+                display: block !important;
+            }
 
-#navbar-vertical .nav-link {
-    padding: 10px 15px;
-    color: #333;
-}
+            #navbar-vertical .nav-link {
+                padding: 10px 15px;
+                color: #333;
+            }
 
-#navbar-vertical .nav-link:hover {
-    background-color: #e9ecef;
-}
+            #navbar-vertical .nav-link:hover {
+                background-color: #e9ecef;
+            }
 
-/* Style cho navbar-nav và nav-link */
-.navbar-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+            /* Style cho navbar-nav và nav-link */
+            .navbar-nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .nav-item {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .nav-link {
+                cursor: pointer;
+                padding: 8px 15px;
+                text-align: center;
+                white-space: nowrap;
+                font-size: 16px;
+                color: #333;
+            }
+
+            .nav-link.active {
+                color: #FF6B6B !important;
+                font-weight: bold;
+            }
+
+            /* Vô hiệu hóa quy tắc ghi đè từ a */
+            a, a:hover, a:active, a:focus, a.tab-link, a.tab-link:hover, a.tab-link.active {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
+
+            /* Style cho tab-link */
+            .course-panel .panel-header a.tab-link {
+                padding: 5px 15px !important;
+                cursor: pointer;
+                color: #FF6B6B !important; /* Màu hồng đỏ mặc định */
+                text-decoration: none !important;
+                position: relative !important;
+                transition: all 0.3s ease !important;
+                display: inline-block !important;
+                font-size: 14px !important;
+                line-height: 1.5 !important;
+                z-index: 10 !important;
+            }
+
+            /* Khi di chuột vào tab */
+            .course-panel .panel-header a.tab-link:hover {
+                color: #0DCAF0 !important; /* Màu xanh dương khi hover */
+                text-decoration: underline !important;
+            }
+
+            /* Khi tab được chọn (click/active) */
+            .course-panel .panel-header a.tab-link.active {
+                color: #0DCAF0 !important; /* Màu xanh dương khi click */
+                font-weight: 700 !important; /* Chữ in đậm */
+                text-decoration: none !important;
+            }
+
+            /* Hình tam giác dưới tab active */
+            .course-panel .panel-header a.tab-link.active::after {
+                content: '' !important;
+                position: absolute !important;
+                bottom: -6px !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+                width: 0 !important;
+                height: 0 !important;
+                border-left: 5px solid transparent !important;
+                border-right: 5px solid transparent !important;
+                border-bottom: 5px solid #0DCAF0 !important;
+                z-index: 11 !important;
+            }
+
+            /* Đảm bảo panel-header không che khuất */
+            .course-panel .panel-header {
+                overflow: visible !important;
+                position: relative !important;
+                z-index: 9 !important;
+            }
+            /* Style cho panel-content và content-list */
+            .panel-content {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .content-list a {
+                display: block;
+                padding: 5px 0;
+                color: #333;
+                text-decoration: none;
+            }
+
+            .content-list a:hover {
+                color: #007bff;
+                text-decoration: underline;
+            }
+
+            /* Style cho navbar */
+            .navbar {
+                padding: 1rem 0;
+                background-color: #f8f9fa;
+                border-bottom: 1px solid #dee2e6;
+            }
+
+            .navbar .container-fluid {
+                display: flex;
+                align-items: center;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .navbar-nav .nav-item {
+                flex-grow: 1;
+                text-align: center;
+            }
+
+            .nav-item.d-flex {
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* Style cho custom-btn */
+            .custom-btn {
+                padding: 8px 20px;
+                border-radius: 20px;
+                font-size: 16px;
+                transition: all 0.3s ease;
+            }
+
+            .custom-btn:hover {
+                background-color: #FFE66D;
+                color: white !important;
+            }
+
+            .custom-btn.btn-login {
+                background-color: #FF6B6B;
+                color: white !important;
+            }
+
+            /* Style cho register-link */
+            .register-link {
+                font-size: 16px;
+                padding: 8px 15px;
+                color: #333;
+                text-decoration: none;
+            }
+
+            .register-link:hover {
+                color: #007bff;
+                text-decoration: underline;
+            }
+
+            /* Style cho carousel-indicators */
+            .carousel-indicators {
+                position: relative !important;
+                bottom: 0 !important;
+                margin-top: 1rem !important;
+                z-index: 2 !important;
+            }
+
+            .carousel-indicators button {
+                width: 12px !important;
+                height: 12px !important;
+                border-radius: 50% !important;
+                background-color: #bbb !important;
+                border: none !important;
+                margin: 0 5px !important;
+                padding: 0 !important;
+                cursor: pointer !important;
+                transition: background-color 0.3s ease !important;
+                box-sizing: content-box !important;
+            }
+
+            .carousel-indicators .active {
+                background-color: #FF6B6B !important;
+                opacity: 1 !important;
+            }
+
+            .carousel-indicators button:hover {
+                background-color: #FF8787 !important;
+            }
+
+            .carousel-indicators button:active,
+            .carousel-indicators button:focus {
+                outline: none !important;
+                box-shadow: none !important;
+            }
+
+            /* Style cho border-custom */
+            .border-custom {
+                border: 1px solid #FF6B6B !important;
+                box-shadow: 0 4px 8px rgba(255, 107, 107, 0.2) !important;
+                border-radius: 8px !important;
+                padding: 15px !important;
+                transition: box-shadow 0.3s ease !important;
+            }
+
+            .border-custom:hover {
+                box-shadow: 0 6px 12px rgba(255, 107, 107, 0.3) !important;
+            }
+            .square-image-container {
+    position: relative;
     width: 100%;
+    padding-bottom: 100%; /* Tạo tỉ lệ 1:1 (hình vuông) */
+    overflow: hidden;
 }
 
-.nav-item {
-    flex: 1;
-    min-width: 0;
+.square-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh lấp đầy mà không méo */
+    border-radius: 8px; /* Bo góc nhẹ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #f8f9fa; /* Viền nhẹ */
 }
 
-.nav-link {
-    cursor: pointer;
-    padding: 8px 15px;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 16px;
-    color: #333;
+.square-image-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3); /* Bóng hồng đỏ */
+}
+.card.h-100.text-center.shadow-sm {
+    border: 3px solid #FF6B6B !important; /* Viền đỏ hồng */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng mượt */
+    position: relative; /* Đảm bảo phóng to không ảnh hưởng bố cục */
 }
 
-.nav-link.active {
-    color: #FF6B6B !important;
-    font-weight: bold;
+.card.h-100.text-center.shadow-sm:hover {
+    transform: scale(1.05); /* Phóng to 5% */
+    box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4); /* Bóng đậm hơn */
+}
+#gioithieu {
+    background-color: #FFF1F1 !important; /* Màu nền hồng nhạt */
+}
+/* Footer Styling */
+.container-fluid.bg-dark.text-white {
+    background-color: #FFF1F1 !important; /* Nền hồng nhạt */
+    color: #333 !important; /* Chữ tối */
 }
 
-/* Vô hiệu hóa quy tắc ghi đè từ a */
-a, a:hover, a:active, a:focus, a.tab-link, a.tab-link:hover, a.tab-link.active {
-    color: inherit !important;
-    text-decoration: none !important;
+.container-fluid.bg-dark.text-white h5.text-primary {
+    color: #FF6B6B !important; /* Tiêu đề xanh dương */
 }
 
-/* Style cho tab-link */
-.course-panel .panel-header a.tab-link {
-    padding: 5px 15px !important;
-    cursor: pointer;
-    color: #FF6B6B !important; /* Màu hồng đỏ mặc định */
-    text-decoration: none !important;
-    position: relative !important;
-    transition: all 0.3s ease !important;
-    display: inline-block !important;
-    font-size: 14px !important;
-    line-height: 1.5 !important;
-    z-index: 10 !important;
+.container-fluid.bg-dark.text-white a.text-white {
+    color: #333 !important; /* Link tối */
 }
 
-/* Khi di chuột vào tab */
-.course-panel .panel-header a.tab-link:hover {
-    color: #0DCAF0 !important; /* Màu xanh dương khi hover */
-    text-decoration: underline !important;
+.container-fluid.bg-dark.text-white a.text-white:hover {
+    color: #FF6B6B !important; /* Hover hồng đỏ */
 }
 
-/* Khi tab được chọn (click/active) */
-.course-panel .panel-header a.tab-link.active {
-    color: #0DCAF0 !important; /* Màu xanh dương khi click */
-    font-weight: 700 !important; /* Chữ in đậm */
-    text-decoration: none !important;
+.container-fluid.bg-dark.text-white .btn-outline-light {
+    border-color: #333 !important; /* Viền icon mạng xã hội */
+    color: #333 !important;
 }
 
-/* Hình tam giác dưới tab active */
-.course-panel .panel-header a.tab-link.active::after {
-    content: '' !important;
-    position: absolute !important;
-    bottom: -6px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: 0 !important;
-    height: 0 !important;
-    border-left: 5px solid transparent !important;
-    border-right: 5px solid transparent !important;
-    border-bottom: 5px solid #0DCAF0 !important;
-    z-index: 11 !important;
+.container-fluid.bg-dark.text-white .btn-outline-light:hover {
+    background-color: #FF6B6B !important; /* Nền hồng đỏ khi hover */
+    color: #fff !important;
+    border-color: #FF6B6B !important;
 }
 
-/* Đảm bảo panel-header không che khuất */
-.course-panel .panel-header {
-    overflow: visible !important;
-    position: relative !important;
-    z-index: 9 !important;
-}
-/* Style cho panel-content và content-list */
-.panel-content {
-    display: flex;
-    justify-content: space-between;
+.container-fluid.bg-dark.text-white .form-control.border-light {
+    background-color: #fff !important; /* Input trắng */
+    border-color: #ccc !important;
+    color: #333 !important;
 }
 
-.content-list a {
-    display: block;
-    padding: 5px 0;
-    color: #333;
-    text-decoration: none;
+.container-fluid.bg-dark.text-white .btn-primary {
+    background-color: #FF6B6B !important; /* Button hồng đỏ */
+    border-color: #FF6B6B !important;
 }
 
-.content-list a:hover {
-    color: #007bff;
-    text-decoration: underline;
+.container-fluid.bg-dark.text-white .btn-primary:hover {
+    background-color: #E55A5A !important; /* Button hover sáng hơn */
+    color: #fff !important;
 }
 
-/* Style cho navbar */
-.navbar {
-    padding: 1rem 0;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #dee2e6;
-}
-
-.navbar .container-fluid {
-    display: flex;
-    align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.navbar-nav .nav-item {
-    flex-grow: 1;
-    text-align: center;
-}
-
-.nav-item.d-flex {
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Style cho custom-btn */
-.custom-btn {
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.custom-btn:hover {
-    background-color: #FFE66D;
-    color: white !important;
-}
-
-.custom-btn.btn-login {
+/* Back to Top Button */
+.back-top-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    top: auto !important; /* Vô hiệu hóa top nếu bị ghi đè */
+    width: 50px;
+    height: 50px;
     background-color: #FF6B6B;
-    color: white !important;
-}
-
-/* Style cho register-link */
-.register-link {
-    font-size: 16px;
-    padding: 8px 15px;
-    color: #333;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 24px;
     text-decoration: none;
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
 }
 
-.register-link:hover {
-    color: #007bff;
-    text-decoration: underline;
+.back-top-icon.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
-/* Style cho carousel-indicators */
-.carousel-indicators {
-    position: relative !important;
-    bottom: 0 !important;
-    margin-top: 1rem !important;
-    z-index: 2 !important;
+.back-top-icon:hover {
+    background-color: #E55A5A;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
 }
-
-.carousel-indicators button {
-    width: 12px !important;
-    height: 12px !important;
-    border-radius: 50% !important;
-    background-color: #bbb !important;
-    border: none !important;
-    margin: 0 5px !important;
-    padding: 0 !important;
-    cursor: pointer !important;
-    transition: background-color 0.3s ease !important;
-    box-sizing: content-box !important;
+/* Đảm bảo text-primary ở logo và About là đỏ hồng */
+.text-primary,
+h1 .text-primary,
+.about-section h5.text-primary {
+    color: #FF6B6B !important;
 }
-
-.carousel-indicators .active {
-    background-color: #FF6B6B !important;
-    opacity: 1 !important;
-}
-
-.carousel-indicators button:hover {
-    background-color: #FF8787 !important;
-}
-
-.carousel-indicators button:active,
-.carousel-indicators button:focus {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-/* Style cho border-custom */
-.border-custom {
-    border: 1px solid #FF6B6B !important;
-    box-shadow: 0 4px 8px rgba(255, 107, 107, 0.2) !important;
-    border-radius: 8px !important;
-    padding: 15px !important;
-    transition: box-shadow 0.3s ease !important;
-}
-
-.border-custom:hover {
-    box-shadow: 0 6px 12px rgba(255, 107, 107, 0.3) !important;
-}
-
 /* Responsive */
-@media (max-width: 992px) {
-    .navbar-nav {
-        flex-direction: column;
-        text-align: center;
+@media (max-width: 991px) {
+    .container-fluid.bg-dark.text-white {
+        padding: 60px 45px !important; /* Padding footer */
     }
-    .navbar-nav .nav-item {
-        margin-bottom: 15px;
-        flex-grow: 0;
-    }
-    .nav-item.d-flex {
-        flex-direction: row;
-        justify-content: center;
-        gap: 10px;
-    }
-    .custom-btn {
-        margin-top: 0;
-    }
-    #navbar-vertical {
-        width: 100%;
-    }
-    #navbar-vertical .d-flex {
-        flex-direction: column;
-    }
-    #navbar-vertical .navbar-nav {
-        width: 100%;
-    }
-    .about-section h5 {
-        font-size: clamp(0.8rem, 2vw, 1.1rem);
-    }
-    .about-section h3 {
-        font-size: clamp(1.1rem, 2.5vw, 1.75rem);
-    }
-    .about-section .col-lg-7 {
-        overflow-x: hidden;
-        max-width: 100%;
+    .back-top-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        bottom: 20px;
+        right: 20px;
+        top: auto !important; /* Vô hiệu hóa top */
     }
 }
-</style>
+
+@media (max-width: 576px) {
+    .back-top-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+
+            /* Responsive */
+            @media (max-width: 992px) {
+                .navbar-nav {
+                    flex-direction: column;
+                    text-align: center;
+                }
+                .navbar-nav .nav-item {
+                    margin-bottom: 15px;
+                    flex-grow: 0;
+                }
+                .nav-item.d-flex {
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 10px;
+                }
+                .custom-btn {
+                    margin-top: 0;
+                }
+                #navbar-vertical {
+                    width: 100%;
+                }
+                #navbar-vertical .d-flex {
+                    flex-direction: column;
+                }
+                #navbar-vertical .navbar-nav {
+                    width: 100%;
+                }
+                .about-section h5 {
+                    font-size: clamp(0.8rem, 2vw, 1.1rem);
+                }
+                .about-section h3 {
+                    font-size: clamp(1.1rem, 2.5vw, 1.75rem);
+                }
+                .about-section .col-lg-7 {
+                    overflow-x: hidden;
+                    max-width: 100%;
+                }
+            }
+        </style>
     </head>
     <body id="top">
         <div class="container-fluid d-none d-lg-block top-header">
@@ -409,28 +548,27 @@ a, a:hover, a:active, a:focus, a.tab-link, a.tab-link:hover, a.tab-link.active {
                             <button id="subjects-btn" class="nav-link d-flex align-items-center justify-content-center custom-btn btn-login"
                                     aria-expanded="false" aria-controls="navbar-vertical"
                                     style="padding: 8px 15px; border-radius: 5px; cursor: pointer; border: none;">
-                                <i class="fa fa-book-open mr-2"></i>Subjects
+                                <i class="fa fa-book-open mr-2"></i>Môn học
                             </button>
                         </li>
                         <li class="nav-item flex-grow-1">
-                            <a class="nav-link active" href="index.html">Home</a>
+                            <a class="nav-link active" href="Home.jsp">Trang chủ</a>
                         </li>
                         <li class="nav-item flex-grow-1">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="About.jsp">Giới thiệu</a>
                         </li>
                         <li class="nav-item flex-grow-1 dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">Pages</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">Khoá học</a>
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                                 <li><a class="dropdown-item" href="job-listings.html">Job Listings</a></li>
                                 <li><a class="dropdown-item" href="job-details.html">Job Details</a></li>
                             </ul>
                         </li>
                         <li class="nav-item flex-grow-1">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="contact.html">Giáo viên</a>
                         </li>
-                        <li class="nav-item flex-grow-1 d-flex justify-content-center align-items-center">
-                            <a class="nav-link register-link" href="#">Register</a>
-                            <a class="nav-link custom-btn btn-login" href="#">Login</a>
+                        <li class="nav-item flex-grow-1 d-flex justify-content-center align-items-center">                            
+                            <a class="nav-link custom-btn btn-login" href="#">Đăng nhập</a>
                         </li>
                     </ul>
                 </div>
@@ -556,115 +694,17 @@ a, a:hover, a:active, a:focus, a.tab-link, a.tab-link:hover, a.tab-link.active {
         <!-- Carousel Start -->
         <div class="container-fluid p-0 pb-5 mb-5">
             <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#header-carousel" data-slide-to="1"></li>
-                    <li data-target="#header-carousel" data-slide-to="2"></li>
-                </ol>
+                
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="min-height: 300px;">
-                        <img class="position-relative w-100" src="img/carousel-1.jpg" style="min-height: 300px; object-fit: cover;">
-                        <div class="carousel-caption d-flex align-items-center justify-content-center">
-                            <div class="p-5" style="width: 100%; max-width: 900px;">
-                                <h5 class="text-white text-uppercase mb-md-3">Best Online Courses</h5>
-                                <h1 class="display-3 text-white mb-md-4">Best Education From Your Home</h1>
-                                <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="min-height: 300px;">
-                        <img class="position-relative w-100" src="img/carousel-2.jpg" style="min-height: 300px; object-fit: cover;">
-                        <div class="carousel-caption d-flex align-items-center justify-content-center">
-                            <div class="p-5" style="width: 100%; max-width: 900px;">
-                                <h5 class="text-white text-uppercase mb-md-3">Best Online Courses</h5>
-                                <h1 class="display-3 text-white mb-md-4">Best Online Learning Platform</h1>
-                                <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="min-height: 300px;">
-                        <img class="position-relative w-100" src="img/carousel-3.jpg" style="min-height: 300px; object-fit: cover;">
-                        <div class="carousel-caption d-flex align-items-center justify-content-center">
-                            <div class="p-5" style="width: 100%; max-width: 900px;">
-                                <h5 class="text-white text-uppercase mb-md-3">Best Online Courses</h5>
-                                <h1 class="display-3 text-white mb-md-4">New Way To Learn From Home</h1>
-                                <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
+                        <img class="position-relative w-100" src="images/carousel-1.jpg" style="min-height: 300px; object-fit: cover;">
+                        
+                    </div>                                       
                 </div>
             </div>
         </div>
         <!-- Carousel End -->
-
-
         <main>
-
-
-            <section class="categories-section section-padding" id="categories-section">
-                <div class="container">
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-lg-12 col-12 text-center">
-                            <h2 class="mb-5">Browse by <span>Categories</span></h2>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="categories-block">
-                                <a href="#" class="d-flex flex-column justify-content-center align-items-center h-100">
-                                    <i class="categories-icon bi-window"></i>
-                                    <small class="categories-block-title">Web design</small>
-                                    <div class="categories-block-number d-flex flex-column justify-content-center align-items-center">
-                                        <span class="categories-block-number-text">320</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="categories-block">
-                                <a href="#" class="d-flex flex-column justify-content-center align-items-center h-100">
-                                    <i class="categories-icon bi-twitch"></i>
-                                    <small class="categories-block-title">Marketing</small>
-                                    <div class="categories-block-number d-flex flex-column justify-content-center align-items-center">
-                                        <span class="categories-block-number-text">180</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="categories-block">
-                                <a href="#" class="d-flex flex-column justify-content-center align-items-center h-100">
-                                    <i class="categories-icon bi-play-circle-fill"></i>
-                                    <small class="categories-block-title">Video</small>
-                                    <div class="categories-block-number d-flex flex-column justify-content-center align-items-center">
-                                        <span class="categories-block-number-text">340</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="categories-block">
-                                <a href="#" class="d-flex flex-column justify-content-center align-items-center h-100">
-                                    <i class="categories-icon bi-globe"></i>
-                                    <small class="categories-block-title">Websites</small>
-                                    <div class="categories-block-number d-flex flex-column justify-content-center align-items-center">
-                                        <span class="categories-block-number-text">140</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="categories-block">
-                                <a href="#" class="d-flex flex-column justify-content-center align-items-center h-100">
-                                    <i class="categories-icon bi-people"></i>
-                                    <small class="categories-block-title">Customer Support</small>
-                                    <div class="categories-block-number d-flex flex-column justify-content-center align-items-center">
-                                        <span class="categories-block-number-text">84</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <!-- About start -->
             <section class="about-section">
                 <div class="container">
@@ -672,8 +712,10 @@ a, a:hover, a:active, a:focus, a.tab-link, a.tab-link:hover, a.tab-link.active {
                         <div class="container py-5">
                             <div class="row align-items-center">
                                 <div class="col-lg-5">
-                                    <img class="img-fluid rounded mb-4 mb-lg-0" src="img/about.jpg" alt="">
+                                    <div class="square-image-container">
+                                    <img class="img-fluid rounded mb-4 mb-lg-0" src="images/about-1.jpg" alt="">
                                 </div>
+                                    </div>
                                 <div class="col-lg-7" style="text-align: justify;">
                                     <div class="text-left mb-4">
                                         <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px; text-align: justify; white-space: nowrap; font-size: clamp(0.9rem, 2.5vw, 1.25rem);">
@@ -748,269 +790,8 @@ a, a:hover, a:active, a:focus, a.tab-link, a.tab-link:hover, a.tab-link.active {
                 </div>
             </section>
             <!-- Ưu thế end -->
-            <section class="job-section job-featured-section section-padding" id="job-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-12 text-center mx-auto mb-4">
-                            <h2>Featured Jobs</h2>
-                            <p><strong>Over 10k opening jobs</strong> Feel free to download and use our free HTML templates from Tooplate website.</p>
-                        </div>
-                        <div class="col-lg-12 col-12">
-                            <div class="job-thumb d-flex">
-                                <div class="job-image-wrap bg-white shadow-lg">
-                                    <img src="images/logos/google.png" class="job-image img-fluid" alt="">
-                                </div>
-                                <div class="job-body d-flex flex-wrap flex-auto align-items-center ms-4">
-                                    <div class="mb-3">
-                                        <h4 class="job-title mb-lg-0">
-                                            <a href="job-details.html" class="job-title-link">Technical Lead</a>
-                                        </h4>
-                                        <div class="d-flex flex-wrap align-items-center">
-                                            <p class="job-location mb-0">
-                                                <i class="custom-icon bi-geo-alt me-1"></i>
-                                                Kuala, Malaysia
-                                            </p>
-                                            <p class="job-date mb-0">
-                                                <i class="custom-icon bi-clock me-1"></i>
-                                                10 hours ago
-                                            </p>
-                                            <p class="job-price mb-0">
-                                                <i class="custom-icon bi-cash me-1"></i>
-                                                $20k
-                                            </p>
-                                            <div class="d-flex">
-                                                <p class="mb-0">
-                                                    <a href="job-listings.html" class="badge badge-level">Internship</a>
-                                                </p>
-                                                <p class="mb-0">
-                                                    <a href="job-listings.html" class="badge">Freelance</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="job-section-btn-wrap">
-                                        <a href="job-details.html" class="custom-btn btn">Apply now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="job-thumb d-flex">
-                                <div class="job-image-wrap bg-white shadow-lg">
-                                    <img src="images/logos/apple.png" class="job-image img-fluid" alt="">
-                                </div>
-                                <div class="job-body d-flex flex-wrap flex-auto align-items-center ms-4">
-                                    <div class="mb-3">
-                                        <h4 class="job-title mb-lg-0">
-                                            <a href="job-details.html" class="job-title-link">Business Director</a>
-                                        </h4>
-                                        <div class="d-flex flex-wrap align-items-center">
-                                            <p class="job-location mb-0">
-                                                <i class="custom-icon bi-geo-alt me-1"></i>
-                                                California, USA
-                                            </p>
-                                            <p class="job-date mb-0">
-                                                <i class="custom-icon bi-clock me-1"></i>
-                                                1 day ago
-                                            </p>
-                                            <p class="job-price mb-0">
-                                                <i class="custom-icon bi-cash me-1"></i>
-                                                $90k
-                                            </p>
-                                            <div class="d-flex">
-                                                <p class="mb-0">
-                                                    <a href="job-listings.html" class="badge badge-level">Senior</a>
-                                                </p>
-                                                <p class="mb-0">
-                                                    <a href="job-listings.html" class="badge">Full Time</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="job-section-btn-wrap">
-                                        <a href="job-details.html" class="custom-btn btn">Apply now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="job-thumb d-flex">
-                                <div class="job-image-wrap bg-white shadow-lg">
-                                    <img src="images/logos/meta.png" class="job-image img-fluid" alt="">
-                                </div>
-                                <div class="job-body d-flex flex-wrap flex-auto align-items-center ms-4">
-                                    <div class="mb-3">
-                                        <h4 class="job-title mb-lg-0">
-                                            <a href="job-details.html" class="job-title-link">HR Manager</a>
-                                        </h4>
-                                        <div class="d-flex flex-wrap align-items-center">
-                                            <p class="job-location mb-0">
-                                                <i class="custom-icon bi-geo-alt me-1"></i>
-                                                Tower, Paris
-                                            </p>
-                                            <p class="job-date mb-0">
-                                                <i class="custom-icon bi-clock me-1"></i>
-                                                22 hours ago
-                                            </p>
-                                            <p class="job-price mb-0">
-                                                <i class="custom-icon bi-cash me-1"></i>
-                                                $50k
-                                            </p>
-                                            <div class="d-flex">
-                                                <p class="mb-0">
-                                                    <a href="job-listings.html" class="badge badge-level">Junior</a>
-                                                </p>
-                                                <p class="mb-0">
-                                                    <a href="job-listings.html" class="badge">Contract</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="job-section-btn-wrap">
-                                        <a href="job-details.html" class="custom-btn btn">Apply now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="job-thumb d-flex">
-                                <div class="job-image-wrap bg-white shadow-lg">
-                                    <img src="images/logos/slack.png" class="job-image img-fluid" alt="">
-                                </div>
-                                <div class="job-body d-flex flex-wrap flex-auto align-items-center ms-4">
-                                    <div class="mb-3">
-                                        <h4 class="job-title mb-lg-0">
-                                            <a href="job-details.html" class="job-title-link">Dev Ops</a>
-                                        </h4>
-                                        <div class="d-flex flex-wrap align-items-center">
-                                            <p class="job-location mb-0">
-                                                <i class="custom-icon bi-geo-alt me-1"></i>
-                                                Bangkok, Thailand
-                                            </p>
-                                            <p class="job-date mb-0">
-                                                <i class="custom-icon bi-clock me-1"></i>
-                                                40 minutes ago
-                                            </p>
-                                            <p class="job-price mb-0">
-                                                <i class="custom-icon bi-cash me-1"></i>
-                                                $75k - 80k
-                                            </p>
-                                            <div class="d-flex">
-                                                <p class="mb-0">
-                                                    <a href="job-listings.html" class="badge badge-level">Senior</a>
-                                                </p>
-                                                <p class="mb-0">
-                                                    <a href="job-listings.html" class="badge">Part Time</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="job-section-btn-wrap">
-                                        <a href="job-details.html" class="custom-btn btn">Apply now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="job-thumb d-flex">
-                                <div class="job-image-wrap bg-white shadow-lg">
-                                    <img src="images/logos/creative-market.png" class="job-image img-fluid" alt="">
-                                </div>
-                                <div class="job-body d-flex flex-wrap flex-auto align-items-center ms-4">
-                                    <div class="mb-3">
-                                        <h4 class="job-title mb-lg-0">
-                                            <a href="job-details.html" class="job-title-link">UX Designer</a>
-                                        </h4>
-                                        <div class="d-flex flex-wrap align-items-center">
-                                            <p class="job-location mb-0">
-                                                <i class="custom-icon bi-geo-alt me-1"></i>
-                                                Bangkok, Thailand
-                                            </p>
-                                            <p class="job-date mb-0">
-                                                <i class="custom-icon bi-clock me-1"></i>
-                                                2 hours ago
-                                            </p>
-                                            <p class="job-price mb-0">
-                                                <i class="custom-icon bi-cash me-1"></i>
-                                                $100k
-                                            </p>
-                                            <div class="d-flex">
-                                                <p class="mb-0">
-                                                    <a href="job-listings.html" class="badge badge-level">Entry</a>
-                                                </p>
-                                                <p class="mb-0">
-                                                    <a href="job-listings.html" class="badge">Remote</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="job-section-btn-wrap">
-                                        <a href="job-details.html" class="custom-btn btn">Apply now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <nav aria-label="Page navigation example">
-                                <ul class="pagination justify-content-center mt-5">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">Prev</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item active" aria-current="page">
-                                        <a class="page-link" href="#">1</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">3</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">4</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">5</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span aria-hidden="true">Next</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-12">
-                            <div class="custom-text-block custom-border-radius-start">
-                                <h2 class="text-white mb-3">Gotto helps you an easier way to get new job</h2>
-                                <p class="text-white">You are not allowed to redistribute the template ZIP file on any other template collection website. Please contact us for more info. Thank you.</p>
-                                <div class="d-flex mt-4">
-                                    <div class="counter-thumb">
-                                        <div class="d-flex">
-                                            <span class="counter-number" data-from="1" data-to="12" data-speed="1000"></span>
-                                            <span class="counter-number-text">M</span>
-                                        </div>
-                                        <span class="counter-text">Daily active users</span>
-                                    </div>
-                                    <div class="counter-thumb">
-                                        <div class="d-flex">
-                                            <span class="counter-number" data-from="1" data-to="450" data-speed="1000"></span>
-                                            <span class="counter-number-text">k</span>
-                                        </div>
-                                        <span class="counter-text">Opening jobs</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-12">
-                            <div class="video-thumb">
-                                <img src="images/people-working-as-team-company.jpg" class="about-image custom-border-radius-end img-fluid" alt="">
-                                <div class="video-info">
-                                    <a href="https://www.youtube.com/tooplate" class="youtube-icon bi-youtube"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
+            
 
             <section class="job-section recent-jobs-section section-padding">
                 <div class="container">
@@ -1630,311 +1411,274 @@ a, a:hover, a:active, a:focus, a.tab-link, a.tab-link:hover, a.tab-link.active {
                             <div class="border-left pl-3 border-danger mb-4 bg-light p-3 rounded shadow-sm">
                                 <p class="mb-2">“Phương pháp dạy Toán tại trung tâm giúp con tôi hiểu bài nhanh hơn rất nhiều.”</p>
                                 <p class="text-right text-danger font-weight-bold mb-0">– Cô Ngọc - phụ huynh lớp 12</p>
-                            </div>
-
-                            <!-- Thêm phản hồi nếu cần -->
+                            </div>                            
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
-
-            <section class="cta-section">
-                <div class="section-overlay"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-10">
-                            <h2 class="text-white mb-2">Over 10k opening jobs</h2>
-                            <p class="text-white">If you are looking for free HTML templates, you may visit Tooplate website. If you need a collection of free templates, you can visit Too CSS website.</p>
-                        </div>
-                        <div class="col-lg-4 col-12 ms-auto">
-                            <div class="custom-border-btn-wrap d-flex align-items-center mt-lg-4 mt-2">
-                                <a href="#" class="custom-btn custom-border-btn btn me-4">Create an account</a>
-                                <a href="#" class="custom-link">Post a job</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <!-- Phản hồi end -->           
         </main>
 
         <footer class="site-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-12 mb-3">
-                        <div class="d-flex align-items-center mb-4">
-                            <img src="images/logo.png" class="img-fluid logo-image">
-                            <div class="d-flex flex-column">
-                                <strong class="logo-text">Gotto</strong>
-                                <small class="logo-slogan">Online Job Portal</small>
-                            </div>
-                        </div>
-                        <p class="mb-2">
-                            <i class="custom-icon bi-globe me-1"></i>
-                            <a href="#" class="site-footer-link">www.jobbportal.com</a>
-                        </p>
-                        <p class="mb-2">
-                            <i class="custom-icon bi-telephone me-1"></i>
-                            <a href="tel: 305-240-9671" class="site-footer-link">305-240-9671</a>
-                        </p>
-                        <p>
-                            <i class="custom-icon bi-envelope me-1"></i>
-                            <a href="mailto:info@yourgmail.com" class="site-footer-link">info@jobportal.co</a>
-                        </p>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6 ms-lg-auto">
-                        <h6 class="site-footer-title">Company</h6>
-                        <ul class="footer-menu">
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">About</a></li>
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Blog</a></li>
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Jobs</a></li>
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-6">
-                        <h6 class="site-footer-title">Resources</h6>
-                        <ul class="footer-menu">
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Guide</a></li>
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">How it works</a></li>
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Salary Tool</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 col-md-8 col-12 mt-3 mt-lg-0">
-                        <h6 class="site-footer-title">Newsletter</h6>
-                        <form class="custom-form newsletter-form" action="#" method="post" role="form">
-                            <h6 class="site-footer-title">Get notified jobs news</h6>
-                            <div class="input-group">
-                                <span class="input-group-text" id="basic-addon1"><i class="bi-person"></i></span>
-                                <input type="text" name="newsletter-name" id="newsletter-name" class="form-control" placeholder="yourname@gmail.com" required>
-                                <button type="submit" class="form-control">
-                                    <i class="bi-send"></i>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="site-footer-bottom">
-                <div class="container">
+            <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+            <div class="row pt-5">
+                <div class="col-lg-7 col-md-12">
                     <div class="row">
-                        <div class="col-lg-4 col-12 d-flex align-items-center">
-                            <p class="copyright-text">Copyright © Gotto Job 2048</p>
-                            <ul class="footer-menu d-flex">
-                                <li class="footer-menu-item"><a href="#" class="footer-menu-link">Privacy Policy</a></li>
-                                <li class="footer-menu-item"><a href="#" class="footer-menu-link">Terms</a></li>
-                            </ul>
+                        <div class="col-md-6 mb-5">
+                            <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
+                            <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+                            <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                            <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                            <div class="d-flex justify-content-start mt-4">
+                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
                         </div>
-                        <div class="col-lg-5 col-12 mt-2 mt-lg-0">
-                            <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-twitter"></a>
-                                </li>
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook"></a>
-                                </li>
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-linkedin"></a>
-                                </li>
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram"></a>
-                                </li>
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-youtube"></a>
-                                </li>
-                            </ul>
+                        <div class="col-md-6 mb-5">
+                            <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Our Courses</h5>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Web Design</a>
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Apps Design</a>
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Marketing</a>
+                                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Research</a>
+                                <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>SEO</a>
+                            </div>
                         </div>
-                        <div class="col-lg-3 col-12 mt-2 d-flex align-items-center mt-lg-0">
-                            <p>Design: <a class="sponsored-link" rel="sponsored" href="https://www.tooplate.com" target="_blank">Tooplate</a></p>
-                        </div>
-                        <a class="back-top-icon bi-arrow-up smoothscroll d-flex justify-content-center align-items-center" href="#top"></a>
                     </div>
                 </div>
+                <div class="col-lg-5 col-md-12 mb-5">
+                    <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Newsletter</h5>
+                    <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum. Dolor duo eirmod sea justo no lorem est diam</p>
+                    <div class="w-100">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary px-4">Sign Up거리</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
             </div>
+            
+        </div>
+           <a class="back-top-icon bi-arrow-up smoothscroll d-flex justify-content-center align-items-center" href="#top"></a> 
+            
         </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+    const backTopBtn = document.querySelector('.back-top-icon');
+
+    if (backTopBtn) {
+        // Hiển thị/ẩn nút khi cuộn
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backTopBtn.classList.add('visible');
+            } else {
+                backTopBtn.classList.remove('visible');
+            }
+        });
+
+        // Cuộn mượt khi bấm
+        backTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    } else {
+        console.error('Back to Top button not found');
+    }
+});
+        </script>
 
         <!-- JAVASCRIPT FILES -->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- <script src="js/owl.carousel.min.js"></script>
-<!-- <script src="js/counter.js"></script> -->
-<!-- <script src="js/custom.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- <script src="js/owl.carousel.min.js"></script>
+        <!-- <script src="js/counter.js"></script> -->
+        <!-- <script src="js/custom.js"></script> -->
 
-        
-    <script>
-    $(document).ready(function () {
-    // Debug tất cả nav-link trong #navbar-vertical
-    $('#navbar-vertical .nav-link').each(function () {
-        const panelId = $(this).attr('data-panel');
-        console.log('Nav-link trong #navbar-vertical:', $(this).text().trim(), 'data-panel:', panelId);
-        if (!panelId) {
-            console.warn('Nav-link thiếu data-panel:', $(this).prop('outerHTML'));
-        }
-    });
 
-    // Debug tất cả panel
-    $('.course-panel').each(function () {
-        console.log('Panel tồn tại:', $(this).attr('id'));
-        console.log('Columns trong panel:', $(this).find('.column').length, $(this).find('.column').map(function() { return $(this).attr('class'); }).get());
-    });
+        <script>
+            $(document).ready(function () {
+                // Debug tất cả nav-link trong #navbar-vertical
+                $('#navbar-vertical .nav-link').each(function () {
+                    const panelId = $(this).attr('data-panel');
+                    console.log('Nav-link trong #navbar-vertical:', $(this).text().trim(), 'data-panel:', panelId);
+                    if (!panelId) {
+                        console.warn('Nav-link thiếu data-panel:', $(this).prop('outerHTML'));
+                    }
+                });
 
-    // Ẩn tất cả panel và cột khi load trang
-    $('.course-panel').removeClass('active').css('display', 'none');
-    $('.course-panel .column').removeClass('active').css('display', 'none');
-    console.log('Khởi tạo: Tất cả panel và cột đã ẩn');
+                // Debug tất cả panel
+                $('.course-panel').each(function () {
+                    console.log('Panel tồn tại:', $(this).attr('id'));
+                    console.log('Columns trong panel:', $(this).find('.column').length, $(this).find('.column').map(function () {
+                        return $(this).attr('class');
+                    }).get());
+                });
 
-    // Ẩn navbar-vertical khi load trang
-    $('#navbar-vertical').removeClass('show').css('display', 'none');
-    console.log('Khởi tạo: Dropdown navbar-vertical đã ẩn');
+                // Ẩn tất cả panel và cột khi load trang
+                $('.course-panel').removeClass('active').css('display', 'none');
+                $('.course-panel .column').removeClass('active').css('display', 'none');
+                console.log('Khởi tạo: Tất cả panel và cột đã ẩn');
 
-    // Toggle dropdown Subjects
-    $('#subjects-btn').click(function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        const $dropdown = $('#navbar-vertical');
-        const isShown = $dropdown.hasClass('show');
-        $dropdown.toggleClass('show').css('display', isShown ? 'none' : 'block');
-        $(this).attr('aria-expanded', !isShown);
-        console.log('Toggle dropdown: show =', !isShown);
-    });
+                // Ẩn navbar-vertical khi load trang
+                $('#navbar-vertical').removeClass('show').css('display', 'none');
+                console.log('Khởi tạo: Dropdown navbar-vertical đã ẩn');
 
-    // Xử lý click vào nav-link trong #navbar-vertical
-    $('#navbar-vertical .nav-link').click(function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        const panelId = $(this).attr('data-panel');
-        console.log('Clicked nav-link:', $(this).text().trim(), 'data-panel:', panelId);
+                // Toggle dropdown Subjects
+                $('#subjects-btn').click(function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const $dropdown = $('#navbar-vertical');
+                    const isShown = $dropdown.hasClass('show');
+                    $dropdown.toggleClass('show').css('display', isShown ? 'none' : 'block');
+                    $(this).attr('aria-expanded', !isShown);
+                    console.log('Toggle dropdown: show =', !isShown);
+                });
 
-        if (!panelId || typeof panelId !== 'string' || panelId.trim() === '') {
-            alert('Lỗi: Panel ID không hợp lệ. Vui lòng thử lại!');
-            console.error('Panel ID không hợp lệ:', panelId, 'Element:', $(this).prop('outerHTML'));
-            return;
-        }
+                // Xử lý click vào nav-link trong #navbar-vertical
+                $('#navbar-vertical .nav-link').click(function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const panelId = $(this).attr('data-panel');
+                    console.log('Clicked nav-link:', $(this).text().trim(), 'data-panel:', panelId);
 
-        const cleanPanelId = panelId.trim();
-        console.log('Clean panelId:', cleanPanelId);
+                    if (!panelId || typeof panelId !== 'string' || panelId.trim() === '') {
+                        alert('Lỗi: Panel ID không hợp lệ. Vui lòng thử lại!');
+                        console.error('Panel ID không hợp lệ:', panelId, 'Element:', $(this).prop('outerHTML'));
+                        return;
+                    }
 
-        const panelElement = document.getElementById(cleanPanelId);
-        if (!panelElement) {
-            alert('Nội dung cho "' + $(this).text().trim() + '" hiện chưa khả dụng. Vui lòng thử lại sau!');
-            console.warn(`Panel ${cleanPanelId} không tồn tại trong DOM`);
-            return;
-        }
+                    const cleanPanelId = panelId.trim();
+                    console.log('Clean panelId:', cleanPanelId);
 
-        const $newPanel = $(panelElement);
-        console.log('Panel được chọn:', $newPanel.attr('id'), 'tồn tại:', $newPanel.length);
+                    const panelElement = document.getElementById(cleanPanelId);
+                    if (!panelElement) {
+                        alert('Nội dung cho "' + $(this).text().trim() + '" hiện chưa khả dụng. Vui lòng thử lại sau!');
+                        console.warn(`Panel ${cleanPanelId} không tồn tại trong DOM`);
+                        return;
+                    }
 
-        $('.course-panel').removeClass('active').css('display', 'none');
-        $('.course-panel .column').removeClass('active').css('display', 'none');
-        console.log('Ẩn tất cả panel và cột');
+                    const $newPanel = $(panelElement);
+                    console.log('Panel được chọn:', $newPanel.attr('id'), 'tồn tại:', $newPanel.length);
 
-        $newPanel.addClass('active').css('display', 'block');
-        console.log('Hiển thị panel:', $newPanel.attr('id'), 'active =', $newPanel.hasClass('active'), 'display =', $newPanel.css('display'));
+                    $('.course-panel').removeClass('active').css('display', 'none');
+                    $('.course-panel .column').removeClass('active').css('display', 'none');
+                    console.log('Ẩn tất cả panel và cột');
 
-        $newPanel.find('.tab-link').removeClass('active');
-        const $documentsTab = $newPanel.find('.tab-link[data-tab="documents"]');
-        $documentsTab.addClass('active');
-        $newPanel.find('.column').removeClass('active').css('display', 'none');
-        const $documentsColumn = $newPanel.find('.column.documents');
-        if ($documentsColumn.length) {
-            $documentsColumn.addClass('active').css('display', 'flex');
-            console.log('Cột Tài liệu active =', $documentsColumn.hasClass('active'), 'display =', $documentsColumn.css('display'));
-        } else {
-            console.warn('Cột Tài liệu không tồn tại trong panel:', $newPanel.attr('id'));
-        }
+                    $newPanel.addClass('active').css('display', 'block');
+                    console.log('Hiển thị panel:', $newPanel.attr('id'), 'active =', $newPanel.hasClass('active'), 'display =', $newPanel.css('display'));
 
-        $('#navbar-vertical .nav-link').removeClass('active');
-        $(this).addClass('active');
-        console.log('Nav-link active:', $(this).text().trim());
+                    $newPanel.find('.tab-link').removeClass('active');
+                    const $documentsTab = $newPanel.find('.tab-link[data-tab="documents"]');
+                    $documentsTab.addClass('active');
+                    $newPanel.find('.column').removeClass('active').css('display', 'none');
+                    const $documentsColumn = $newPanel.find('.column.documents');
+                    if ($documentsColumn.length) {
+                        $documentsColumn.addClass('active').css('display', 'flex');
+                        console.log('Cột Tài liệu active =', $documentsColumn.hasClass('active'), 'display =', $documentsColumn.css('display'));
+                    } else {
+                        console.warn('Cột Tài liệu không tồn tại trong panel:', $newPanel.attr('id'));
+                    }
 
-        console.log('Dropdown vẫn mở để chọn mục khác');
-    });
+                    $('#navbar-vertical .nav-link').removeClass('active');
+                    $(this).addClass('active');
+                    console.log('Nav-link active:', $(this).text().trim());
 
-    // Xử lý hover tab
-    $('.tab-link').on('mouseenter', function () {
-        const $panel = $(this).closest('.course-panel');
-        let tab = $(this).data('tab');
-        console.log('Tab value:', tab, 'Element:', $(this).prop('outerHTML'));
+                    console.log('Dropdown vẫn mở để chọn mục khác');
+                });
 
-        if (typeof tab !== 'string') {
-            console.warn('Tab không phải chuỗi:', tab, 'Element:', $(this).prop('outerHTML'));
-            tab = 'documents';
-        }
+                // Xử lý hover tab
+                $('.tab-link').on('mouseenter', function () {
+                    const $panel = $(this).closest('.course-panel');
+                    let tab = $(this).data('tab');
+                    console.log('Tab value:', tab, 'Element:', $(this).prop('outerHTML'));
 
-        const cleanTab = tab.replace(/[^\w\s-]/g, '').trim();
-        console.log('Cleaned tab value:', cleanTab, 'Char codes:', cleanTab.split('').map(char => char.charCodeAt(0)));
+                    if (typeof tab !== 'string') {
+                        console.warn('Tab không phải chuỗi:', tab, 'Element:', $(this).prop('outerHTML'));
+                        tab = 'documents';
+                    }
 
-        if (cleanTab === '') {
-            console.warn('Cleaned tab is empty, falling back to documents:', tab, 'Element:', $(this).prop('outerHTML'));
-            tab = 'documents';
-        }
+                    const cleanTab = tab.replace(/[^\w\s-]/g, '').trim();
+                    console.log('Cleaned tab value:', cleanTab, 'Char codes:', cleanTab.split('').map(char => char.charCodeAt(0)));
 
-        console.log('Hover tab:', cleanTab, 'trong panel', $panel.attr('id'));
+                    if (cleanTab === '') {
+                        console.warn('Cleaned tab is empty, falling back to documents:', tab, 'Element:', $(this).prop('outerHTML'));
+                        tab = 'documents';
+                    }
 
-        // Debug $panel
-        console.log('Panel element:', $panel.length, 'Classes:', $panel.attr('class'));
-        console.log('Columns trong panel:', $panel.find('.column').length, $panel.find('.column').map(function() { return $(this).attr('class'); }).get());
+                    console.log('Hover tab:', cleanTab, 'trong panel', $panel.attr('id'));
 
-        $panel.find('.tab-link').removeClass('active');
-        $panel.find('.column').removeClass('active').css('display', 'none');
+                    // Debug $panel
+                    console.log('Panel element:', $panel.length, 'Classes:', $panel.attr('class'));
+                    console.log('Columns trong panel:', $panel.find('.column').length, $panel.find('.column').map(function () {
+                        return $(this).attr('class');
+                    }).get());
 
-        // Sử dụng selector an toàn hơn
-        const selector = '.column.' + cleanTab;
-        console.log('Selector:', selector);
-        const $targetColumn = $panel.find(selector);
-        if ($targetColumn.length) {
-            $targetColumn.addClass('active').css('display', 'flex');
-            console.log('Cột', cleanTab, 'active =', $targetColumn.hasClass('active'), 'display =', $targetColumn.css('display'));
-        } else {
-            console.warn('Cột ' + selector + ' không tồn tại trong panel:', $panel.attr('id'));
-            const $defaultColumn = $panel.find('.column.documents');
-            if ($defaultColumn.length) {
-                $panel.find('.tab-link[data-tab="documents"]').addClass('active');
-                $defaultColumn.addClass('active').css('display', 'flex');
-                console.log('Hiển thị cột Tài liệu mặc định');
-            } else {
-                console.warn('Cột .column.documents cũng không tồn tại trong panel:', $panel.attr('id'));
-            }
-        }
-    });
-    // Xử lý click vào tab-link
-$('.tab-link').on('click', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    
-    const $panel = $(this).closest('.course-panel');
-    const tab = $(this).data('tab');
-    console.log('Clicked tab:', tab, 'trong panel', $panel.attr('id'));
+                    $panel.find('.tab-link').removeClass('active');
+                    $panel.find('.column').removeClass('active').css('display', 'none');
 
-    // Xóa active khỏi tất cả tab-link và column trong panel
-    $panel.find('.tab-link').removeClass('active');
-    $panel.find('.column').removeClass('active').css('display', 'none');
+                    // Sử dụng selector an toàn hơn
+                    const selector = '.column.' + cleanTab;
+                    console.log('Selector:', selector);
+                    const $targetColumn = $panel.find(selector);
+                    if ($targetColumn.length) {
+                        $targetColumn.addClass('active').css('display', 'flex');
+                        console.log('Cột', cleanTab, 'active =', $targetColumn.hasClass('active'), 'display =', $targetColumn.css('display'));
+                    } else {
+                        console.warn('Cột ' + selector + ' không tồn tại trong panel:', $panel.attr('id'));
+                        const $defaultColumn = $panel.find('.column.documents');
+                        if ($defaultColumn.length) {
+                            $panel.find('.tab-link[data-tab="documents"]').addClass('active');
+                            $defaultColumn.addClass('active').css('display', 'flex');
+                            console.log('Hiển thị cột Tài liệu mặc định');
+                        } else {
+                            console.warn('Cột .column.documents cũng không tồn tại trong panel:', $panel.attr('id'));
+                        }
+                    }
+                });
+                // Xử lý click vào tab-link
+                $('.tab-link').on('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
 
-    // Thêm active vào tab-link được click
-    $(this).addClass('active');
+                    const $panel = $(this).closest('.course-panel');
+                    const tab = $(this).data('tab');
+                    console.log('Clicked tab:', tab, 'trong panel', $panel.attr('id'));
 
-    // Hiển thị column tương ứng
-    const $targetColumn = $panel.find('.column.' + tab);
-    if ($targetColumn.length) {
-        $targetColumn.addClass('active').css('display', 'flex');
-        console.log('Cột', tab, 'active =', $targetColumn.hasClass('active'), 'display =', $targetColumn.css('display'));
-    } else {
-        console.warn('Cột .' + tab + ' không tồn tại trong panel:', $panel.attr('id'));
-    }
-});
+                    // Xóa active khỏi tất cả tab-link và column trong panel
+                    $panel.find('.tab-link').removeClass('active');
+                    $panel.find('.column').removeClass('active').css('display', 'none');
 
-    // Đóng dropdown khi click ra ngoài
-    $(document).click(function (e) {
-        if (!$(e.target).closest('#subjects-btn, #navbar-vertical').length) {
-            $('#navbar-vertical').removeClass('show').css('display', 'none');
-            $('#subjects-btn').attr('aria-expanded', 'false');
-            console.log('Đóng dropdown khi click ra ngoài');
-        }
-    });
-});
-</script>
+                    // Thêm active vào tab-link được click
+                    $(this).addClass('active');
+
+                    // Hiển thị column tương ứng
+                    const $targetColumn = $panel.find('.column.' + tab);
+                    if ($targetColumn.length) {
+                        $targetColumn.addClass('active').css('display', 'flex');
+                        console.log('Cột', tab, 'active =', $targetColumn.hasClass('active'), 'display =', $targetColumn.css('display'));
+                    } else {
+                        console.warn('Cột .' + tab + ' không tồn tại trong panel:', $panel.attr('id'));
+                    }
+                });
+
+                // Đóng dropdown khi click ra ngoài
+                $(document).click(function (e) {
+                    if (!$(e.target).closest('#subjects-btn, #navbar-vertical').length) {
+                        $('#navbar-vertical').removeClass('show').css('display', 'none');
+                        $('#subjects-btn').attr('aria-expanded', 'false');
+                        console.log('Đóng dropdown khi click ra ngoài');
+                    }
+                });
+            });
+        </script>
 
 
 
@@ -1958,12 +1702,12 @@ $('.tab-link').on('click', function (e) {
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script>
-document.querySelectorAll('[class]').forEach(el => {
-    if (el.className.includes('.')) {
-        console.error('❌ Có dấu chấm dư trong class:', el);
-    }
-});
-</script>
+            document.querySelectorAll('[class]').forEach(el => {
+                if (el.className.includes('.')) {
+                    console.error('❌ Có dấu chấm dư trong class:', el);
+                }
+            });
+        </script>
 
     </body>
 </html>
