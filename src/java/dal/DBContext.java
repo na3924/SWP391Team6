@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  * @author FPT University - PRJ301
  */
 public class DBContext {
-    protected Connection connection;
+    public Connection connection;
     public DBContext()
     {
         //@Students: You are allowed to edit user, pass, url variables to fit 
@@ -27,8 +27,8 @@ public class DBContext {
         //where StudentDBContext is located in dal package, 
         try {
             String user = "sa";
-            String pass = "123";
-            String url = "jdbc:sqlserver://VANTHINHU\\KTEAM:1433;databaseName=MyOrder";
+            String pass = "sa";
+            String url = "jdbc:sqlserver://Admin-PC:1433;databaseName=edura";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             connection = DriverManager.getConnection(url, user, pass);
         } catch (ClassNotFoundException | SQLException ex) {
